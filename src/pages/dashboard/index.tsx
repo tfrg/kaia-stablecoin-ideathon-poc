@@ -1,3 +1,4 @@
+import { AppSidebar } from '@/components/ui/layout/app-sidebar'
 import {
   Sidebar,
   SidebarProvider,
@@ -8,7 +9,7 @@ export default function Dashboard() {
   return (
     <>
       <SidebarProvider>
-        <Sidebar />
+        <AppSidebar />
         <SidebarTrigger></SidebarTrigger>
         <span>Dashboard</span>
       </SidebarProvider>
