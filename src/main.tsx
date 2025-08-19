@@ -8,6 +8,9 @@ import {
 } from 'react-router-dom'
 import './index.css'
 import Router from './router'
+import { ThemeProvider } from './context/theme-context'
+
+import { UI_THEME_STORAGE_KEY } from './constants/ui.constants'
 
 const router = createBrowserRouter(
   createRoutesFromElements(<Route path='/*' element={<Router />} />)
@@ -15,6 +18,8 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider defaultTheme='dark' storageKey={UI_THEME_STORAGE_KEY}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>
 )
