@@ -19,7 +19,10 @@ export function PortfolioPerformanceLineChart({
   chartData,
 }: PortfolioPerformanceLineChartProps) {
   return (
-    <ChartContainer config={portfolioPerformanceChartConfig}>
+    <ChartContainer
+      className='w-full h-[200px]'
+      config={portfolioPerformanceChartConfig}
+    >
       <LineChart
         accessibilityLayer
         data={chartData}

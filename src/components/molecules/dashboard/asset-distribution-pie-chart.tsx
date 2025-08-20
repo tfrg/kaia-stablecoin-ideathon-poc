@@ -50,7 +50,13 @@ export function AssetDistributionPieChart({
           cursor={false}
           content={<ChartTooltipContent hideLabel />}
         />
-        <Pie data={chartData} dataKey='allocation' nameKey='asset' />
+        <Pie
+          data={chartData}
+          dataKey='allocation'
+          nameKey='asset'
+          startAngle={90}
+          endAngle={-270}
+        />
         <Legend
           layout='vertical'
           verticalAlign='middle'

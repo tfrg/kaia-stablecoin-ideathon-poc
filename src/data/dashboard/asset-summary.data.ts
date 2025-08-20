@@ -1,28 +1,31 @@
-import { AssetSummaryData } from '@/types/dashboard'
+import { TimeFrame } from '@/types/common'
+import {
+  AssetTotalInfo,
+  RetirementProgressInfo,
+  PortfolioRiskInfo,
+  MonthlyContributionInfo,
+} from '@/types/dashboard'
 
-export const assetSummaryData: AssetSummaryData[] = [
-  {
-    id: 'total-asset',
-    title: '총 자산 가치',
-    value: '$45,231.89',
-    change: '+20.1% from last month',
-  },
-  {
-    id: 'contribution',
-    title: '현가 기준 총 납입금 vs 필요금',
-    value: '$45,231.89',
-    change: '+20.1% from last month',
-  },
-  {
-    id: 'risk',
-    title: '포트폴리오 리스크',
-    value: '$45,231.89',
-    change: '+20.1% from last month',
-  },
-  {
-    id: 'monthly',
-    title: '월별 납입액',
-    value: '$45,231.89',
-    change: '+20.1% from last month',
-  },
-]
+export const assetTotalInfoData: AssetTotalInfo = {
+  totalValue: 45231.89,
+  changePercentage: 20.1,
+  changeTimeframe: '24h' as TimeFrame,
+}
+
+export const retirementProgressInfoData: RetirementProgressInfo = {
+  currentValue: 3060000,
+  targetValue: 3000000,
+  fundingRatio: 102,
+}
+
+export const portfolioRiskInfo: PortfolioRiskInfo = {
+  riskScore: 5.8,
+  maxScore: 10,
+  status: '목표 범위 내',
+}
+
+export const monthlyContributionInfo: MonthlyContributionInfo = {
+  amount: 150,
+  currency: 'KAIA',
+  nextPaymentDate: '6월 5일',
+}
