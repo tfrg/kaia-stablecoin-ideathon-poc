@@ -11,9 +11,6 @@ export const assetDistributionChartData: AssetChartDataItem[] = [
 ]
 
 export const assetDistributionChartConfig: ChartConfig = {
-  allocation: {
-    label: '비중',
-  },
   BTC: {
     label: 'BTC',
     color: 'var(--chart-1)',
