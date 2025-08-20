@@ -6,11 +6,11 @@ import { PortfolioSummarySection } from '@/components/organism/dashboard/portfol
 
 export default function Dashboard() {
   return (
-    <div className='border-t'>
+    <div className='w-screen border-t'>
       <div className='flex'>
         <AppSidebar />
 
-        <div>
+        <div className='w-full'>
           <AssetSummarySection />
           <PortfolioSummarySection />
           <PerformanceSummarySection />
