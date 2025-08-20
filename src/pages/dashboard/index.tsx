@@ -1,18 +1,13 @@
-import { AppSidebar } from '@/components/ui/layout/app-sidebar'
-import {
-  Sidebar,
-  SidebarProvider,
-  SidebarTrigger,
-} from '@/components/ui/sidebar'
+import { AppSidebar } from '@/components/layout/app-sidebar'
+import { AssetSummaryContainer } from '@/components/organism/dashboard/asset-summary-container'
 
 export default function Dashboard() {
   return (
-    <>
-      <SidebarProvider>
+    <div className='border-t'>
+      <div className='flex'>
         <AppSidebar />
-        <SidebarTrigger></SidebarTrigger>
-        <span>Dashboard</span>
-      </SidebarProvider>
-    </>
+        <AssetSummaryContainer />
+      </div>
+    </div>
   )
 }

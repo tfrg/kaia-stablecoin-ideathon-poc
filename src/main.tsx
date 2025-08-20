@@ -6,10 +6,13 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from 'react-router-dom'
-import './index.css'
-import Router from './router'
-import { ThemeProvider } from './context/theme-context'
 
+import './index.css'
+
+import { ThemeProvider } from './context/theme-context'
+import { SidebarProvider } from './components/ui/sidebar'
+
+import Router from './router'
 import { UI_THEME_STORAGE_KEY } from './constants/ui.constants'
 
 const router = createBrowserRouter(
@@ -19,7 +22,9 @@ const router = createBrowserRouter(
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider defaultTheme='dark' storageKey={UI_THEME_STORAGE_KEY}>
-      <RouterProvider router={router} />
+      <SidebarProvider>
+        <RouterProvider router={router} />
+      </SidebarProvider>
     </ThemeProvider>
   </StrictMode>
 )
