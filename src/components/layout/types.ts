@@ -23,8 +23,4 @@ interface NavGroup {
   items: NavItem[]
 }
 
-interface SidebarData {
-  navGroups: NavGroup[]
-}
-
-export type { NavGroup, NavItem, NavCollapsible, NavLink, SidebarData }
+export type { NavGroup, NavItem, NavCollapsible, NavLink }

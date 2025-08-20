@@ -6,7 +6,7 @@ import {
   SidebarRail,
   useSidebar,
 } from '@/components/ui/sidebar'
-import { sidebarData } from './data/sidebar-data'
+import { sidebarData } from '../../data/common/sidebar-data'
 import { NavGroup } from './nav-group'
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {

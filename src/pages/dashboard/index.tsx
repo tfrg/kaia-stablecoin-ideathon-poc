@@ -1,12 +1,18 @@
 import { AppSidebar } from '@/components/layout/app-sidebar'
-import { AssetSummaryContainer } from '@/components/organism/dashboard/asset-summary-container'
+
+import { AssetSummarySection } from '@/components/organism/dashboard/asset-summary-section'
+import { PortfolioSummarySection } from '@/components/organism/dashboard/portfolio-summary-section'
 
 export default function Dashboard() {
   return (
     <div className='border-t'>
       <div className='flex'>
         <AppSidebar />
-        <AssetSummaryContainer />
+
+        <div>
+          <AssetSummarySection />
+          <PortfolioSummarySection />
+        </div>
       </div>
     </div>
   )

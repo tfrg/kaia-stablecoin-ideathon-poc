@@ -1,4 +1,8 @@
-import { SidebarData } from '../types'
+import { NavGroup } from '@/components/layout/types'
+
+export interface SidebarData {
+  navGroups: NavGroup[]
+}
 
 /**
  * Sidebar data configuration objects
