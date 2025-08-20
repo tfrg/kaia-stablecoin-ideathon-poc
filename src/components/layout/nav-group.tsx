@@ -28,25 +28,30 @@ import { Badge } from '@/components/ui/badge'
 
 import { NavCollapsible, NavGroup, NavItem, NavLink } from './types'
 
-export function NavGroup({ title, items }: NavGroup) {
+export function NavGroup({ title, items, currentPath }: NavGroup) {
   const { state, isMobile } = useSidebar()
 
   return (
     <SidebarGroup>
       <SidebarMenu>
         {items.map((item) => {
-          console.log(item, 'item?')
           const key = `${item.title}-${item.url}`
 
           if (!item.items)
-            return <SidebarMenuLink key={key} item={item} href={'/'} />
+            return <SidebarMenuLink key={key} item={item} href={currentPath} />
 
           if (state === 'collapsed' && !isMobile)
             return (
-              <SidebarMenuCollapsedDropdown key={key} item={item} href={'/'} />
+              <SidebarMenuCollapsedDropdown
+                key={key}
+                item={item}
+                href={currentPath}
+              />
             )
 
-          return <SidebarMenuCollapsible key={key} item={item} href={'/'} />
+          return (
+            <SidebarMenuCollapsible key={key} item={item} href={currentPath} />
+          )
         })}
       </SidebarMenu>
     </SidebarGroup>
@@ -169,6 +174,7 @@ const SidebarMenuCollapsedDropdown = ({
 }
 
 function checkIsActive(href: string, item: NavItem, mainNav = false) {
+  console.log(href, item, '?!')
   return (
     href === item.url || // /endpint?search=param
     href.split('?')[0] === item.url || // endpoint

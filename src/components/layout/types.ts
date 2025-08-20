@@ -20,6 +20,7 @@ type NavItem = NavCollapsible | NavLink
 
 interface NavGroup {
   title: string
+  currentPath: string
   items: NavItem[]
 }
 

@@ -29,7 +29,7 @@ export const sidebarData: SidebarData = {
         },
         {
           title: '목표 관리',
-          url: '/goal',
+          url: '/goals',
         },
         {
           title: '자산 분석',
