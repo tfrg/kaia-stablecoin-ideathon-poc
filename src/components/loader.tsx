@@ -1,3 +1,10 @@
+import { LoaderIcon } from 'lucide-react'
+
 export default function Loader() {
-  return <span>loader</span>
+  return (
+    <div className='w-screen h-svh flex  justify-center items-center'>
+      <LoaderIcon className='animate-spin' size={32} />
+      <span className='sr-only'>loading</span>
+    </div>
+  )
 }
