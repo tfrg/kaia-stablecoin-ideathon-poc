@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import { Box } from '@/components/ui/box'
 
 export function GoalOptimizationCard(): React.JSX.Element {
   return (
@@ -11,7 +12,7 @@ export function GoalOptimizationCard(): React.JSX.Element {
         </Button>
       </CardHeader>
       <CardContent className='grid gap-2'>
-        <div className='flex items-start gap-4 rounded-md bg-gray-800 p-4'>
+        <Box className='items-start gap-4 p-4' direction={'row'}>
           <div className='bg-olive-100 flex h-12 w-12 items-center justify-center rounded-full text-xl font-bold text-white'>
             1
           </div>
@@ -23,9 +24,9 @@ export function GoalOptimizationCard(): React.JSX.Element {
               자산 충당률 115% / 목표 달성 확률 97%
             </p>
           </div>
-        </div>
+        </Box>
 
-        <div className='flex items-start gap-4 rounded-md bg-gray-800 p-4'>
+        <Box className='items-start gap-4 p-4' direction={'row'}>
           <div className='bg-olive-700 flex h-12 w-12 items-center justify-center rounded-full text-xl font-bold text-white'>
             2
           </div>
@@ -37,7 +38,7 @@ export function GoalOptimizationCard(): React.JSX.Element {
               자산 충당률 112% / 목표 달성 확률 95%
             </p>
           </div>
-        </div>
+        </Box>
       </CardContent>
     </Card>
   )

@@ -1,12 +1,14 @@
 import { DeFiPoolData } from '@/types/dashboard'
 
+import { Box } from '@/components/ui/box'
+
 interface DeFiPoolCardProps {
   poolData: DeFiPoolData
 }
 
 export function DeFiPoolBox({ poolData }: DeFiPoolCardProps) {
   return (
-    <div className='flex flex-col rounded-md bg-gray-800/50 p-4'>
+    <Box className='p-4'>
       <div className='mb-2 flex items-center justify-between'>
         <h3 className='text-base font-medium'>{poolData.name}</h3>
         <div className='flex items-center'>
@@ -29,6 +31,6 @@ export function DeFiPoolBox({ poolData }: DeFiPoolCardProps) {
         <div className='text-muted-foreground'>TVL: {poolData.tvl}</div>
         <div className='text-muted-foreground'>거래량: {poolData.volume}</div>
       </div>
-    </div>
+    </Box>
   )
 }

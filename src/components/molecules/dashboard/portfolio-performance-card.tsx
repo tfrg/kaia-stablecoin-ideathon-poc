@@ -18,7 +18,7 @@ export function PortfolioPerformanceCard({
   statData,
 }: PortfolioPerformanceCardProps): React.JSX.Element {
   return (
-    <Card className='gap-0'>
+    <Card className='h-full gap-0'>
       <CardHeader>
         <CardTitle>포트폴리오 성과</CardTitle>
       </CardHeader>

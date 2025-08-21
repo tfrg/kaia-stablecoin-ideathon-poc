@@ -1,6 +1,7 @@
 import { GoalOptimizationCard } from '@/components/molecules/goals/goal-optimization-card'
 import { GoalSimulationCard } from '@/components/molecules/goals/goal-simulation-card'
 import { OtherFinancialGoalsCard } from '@/components/molecules/goals/other-financial-goals-card'
+
 import { Tabs, TabsContent } from '@/components/ui/tabs'
 
 export function GoalSimulationSection(): React.JSX.Element {

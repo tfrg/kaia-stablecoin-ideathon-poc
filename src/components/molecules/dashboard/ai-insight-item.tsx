@@ -1,3 +1,5 @@
+import { Box } from '@/components/ui/box'
+
 interface InsightItemProps {
   category: string
   content: string
@@ -10,13 +12,9 @@ export function AiInsightItem({
   isHighlighted = false,
 }: InsightItemProps): React.JSX.Element {
   return (
-    <div
-      className={`p-3 rounded-md ${
-        isHighlighted ? 'bg-red-900/30 border border-red-500' : 'bg-gray-800/50'
-      }`}
-    >
+    <Box>
       <h4 className='text-sm font-medium text-gray-300'>{category}:</h4>
       <p className='text-sm text-gray-400'>{content}</p>
-    </div>
+    </Box>
   )
 }

@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Box } from '@/components/ui/box'
 
 export function OtherFinancialGoalsCard(): React.JSX.Element {
   return (
@@ -7,7 +8,7 @@ export function OtherFinancialGoalsCard(): React.JSX.Element {
         <CardTitle className='font-bold'>다른 재정 목표</CardTitle>
       </CardHeader>
       <CardContent className='grid gap-2'>
-        <div className='flex items-start gap-4 rounded-md bg-gray-800 p-4'>
+        <Box className='items-start gap-4 p-4' direction={'row'}>
           <div className='bg-olive-700 flex h-12 w-12 items-center justify-center rounded-full text-xl font-bold text-white'>
             1
           </div>
@@ -17,9 +18,9 @@ export function OtherFinancialGoalsCard(): React.JSX.Element {
               자산 충당률 65% / 목표 달성 확률 58%
             </p>
           </div>
-        </div>
+        </Box>
 
-        <div className='flex items-start gap-4 rounded-md bg-gray-800 p-4'>
+        <Box className='items-start gap-4 p-4' direction={'row'}>
           <div className='bg-olive-700 flex h-12 w-12 items-center justify-center rounded-full text-xl font-bold text-white'>
             2
           </div>
@@ -29,7 +30,7 @@ export function OtherFinancialGoalsCard(): React.JSX.Element {
               자산 충당률 42% / 목표 달성 확률 35%
             </p>
           </div>
-        </div>
+        </Box>
       </CardContent>
     </Card>
   )

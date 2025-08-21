@@ -2,6 +2,7 @@ import { GoalSimulationAreaChart } from '@/components/molecules/goals/chart'
 import { GoalAlignmentSimulator } from '@/components/molecules/goals/goal-alignment-simulator'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Box } from '@/components/ui/box'
 
 export function GoalSimulationCard(): React.JSX.Element {
   return (
@@ -10,12 +11,12 @@ export function GoalSimulationCard(): React.JSX.Element {
         <CardTitle className='font-bold'>목표 달성 시뮬레이션</CardTitle>
       </CardHeader>
       <CardContent className='grid gap-2'>
-        <div className='rounded-md bg-gray-800/50 p-4'>
+        <Box className='p-4'>
           <GoalSimulationAreaChart />
-        </div>
-        <div className='rounded-md bg-gray-800/50 p-4'>
+        </Box>
+        <Box className='p-4'>
           <GoalAlignmentSimulator />
-        </div>
+        </Box>
       </CardContent>
     </Card>
   )

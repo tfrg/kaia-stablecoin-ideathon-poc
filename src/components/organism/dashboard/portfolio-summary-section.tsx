@@ -18,13 +18,13 @@ export function PortfolioSummarySection(): React.JSX.Element {
       >
         <TabsContent value='overview' className='space-y-4'>
           <div className='grid grid-cols-1 gap-4 xl:grid-cols-12'>
-            <div className='col-span-1 xl:col-span-5'>
+            <div className='col-span-1 xl:col-span-4'>
               <AssetDistributionCard chartData={assetDistributionChartData} />
             </div>
             <div className='col-span-1 xl:col-span-4'>
               <AiInsightCard data={aiInsightData} />
             </div>
-            <div className='col-span-1 xl:col-span-3'>
+            <div className='col-span-1 xl:col-span-4'>
               <AutomationSettingsCard data={automationSettingsData} />
             </div>
           </div>

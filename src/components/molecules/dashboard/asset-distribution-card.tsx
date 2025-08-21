@@ -12,7 +12,7 @@ export function AssetDistributionCard({
   chartData,
 }: AssetDistributionCardProps): React.JSX.Element {
   return (
-    <Card className='gap-0'>
+    <Card className='h-full gap-0'>
       <CardHeader>
         <CardTitle>자산 분포</CardTitle>
       </CardHeader>

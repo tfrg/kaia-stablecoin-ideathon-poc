@@ -14,7 +14,7 @@ export function AiInsightCard({
   highlightedInsightId,
 }: AiInsightCardProps): React.JSX.Element {
   return (
-    <Card>
+    <Card className='h-full'>
       <CardHeader>
         <CardTitle>AI 인사이트</CardTitle>
       </CardHeader>

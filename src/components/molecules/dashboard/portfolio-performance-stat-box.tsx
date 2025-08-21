@@ -1,3 +1,5 @@
+import { Box } from '@/components/ui/box'
+
 interface PortfolioStatBoxProps {
   label: string
   value: string
@@ -12,7 +14,7 @@ export function PortfolioStatBox({
   valueColor = 'text-[var(--primary)]',
 }: PortfolioStatBoxProps): React.JSX.Element {
   return (
-    <div className='bg-muted flex flex-col items-center rounded-md p-3'>
+    <Box className='items-center'>
       <span className='text-muted-foreground mb-1 text-xs'>{label}</span>
       <span className='text-sm font-medium'>
         {highlightedValue ? (
@@ -23,6 +25,6 @@ export function PortfolioStatBox({
           <span className={valueColor}>{value}</span>
         )}
       </span>
-    </div>
+    </Box>
   )
 }

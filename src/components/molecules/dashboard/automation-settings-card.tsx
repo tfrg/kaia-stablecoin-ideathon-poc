@@ -12,7 +12,7 @@ export function AutomationSettingsCard({
   data,
 }: AutomationSettingsCardProps): React.JSX.Element {
   return (
-    <Card>
+    <Card className='h-full'>
       <CardHeader>
         <CardTitle>자동화 설정</CardTitle>
       </CardHeader>

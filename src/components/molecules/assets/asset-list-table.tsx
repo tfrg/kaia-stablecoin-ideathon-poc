@@ -35,9 +35,10 @@ export function AssetListTable({ data }: AssetListTableProps) {
           ))}
         </TableRow>
       </TableHeader>
-      <TableBody>
+      <TableBody className='[&>tr:nth-child(odd)]:bg-[var(--surface-02)]'>
+        {/* <TableBody> */}
         {data.map((asset) => (
-          <TableRow key={asset.id}>
+          <TableRow key={asset.id} className='hover:bg-transparent'>
             <TableCell className='font-medium'>
               <div className='flex items-center gap-2'>
                 {asset.icon}
