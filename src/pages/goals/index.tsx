@@ -1,8 +1,7 @@
 import { AppSidebar } from '@/components/layout/app-sidebar'
 
-import { AssetSummarySection } from '@/components/organism/dashboard/asset-summary-section'
-import { PerformanceSummarySection } from '@/components/organism/dashboard/performance-summary-section'
-import { PortfolioSummarySection } from '@/components/organism/dashboard/portfolio-summary-section'
+import { GoalSimulationSection } from '@/components/organism/goals/goal-simulation-section'
+import { RetirementGoalsSection } from '@/components/organism/goals/retirement-goals-section'
 
 export default function Goals() {
   return (
@@ -10,10 +9,9 @@ export default function Goals() {
       <div className='flex'>
         <AppSidebar />
 
-        <div className='w-full'>
-          {/* <AssetSummarySection />
-          <PortfolioSummarySection />
-          <PerformanceSummarySection /> */}
+        <div className='grid w-full grid-cols-1 gap-4'>
+          <RetirementGoalsSection />
+          <GoalSimulationSection />
         </div>
       </div>
     </div>

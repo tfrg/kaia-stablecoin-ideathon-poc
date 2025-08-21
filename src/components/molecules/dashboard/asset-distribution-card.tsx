@@ -1,6 +1,6 @@
 import { AssetChartDataItem } from '@/types/dashboard'
 
-import { AssetDistributionPieChart } from '@/components/molecules/dashboard/asset-distribution-pie-chart'
+import { AssetDistributionPieChart } from '@/components/molecules/dashboard/chart'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 

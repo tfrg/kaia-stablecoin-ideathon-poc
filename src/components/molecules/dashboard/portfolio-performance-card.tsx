@@ -3,7 +3,7 @@ import {
   PortfolioPerformanceStat,
 } from '@/types/dashboard'
 
-import { PortfolioPerformanceLineChart } from '@/components/molecules/dashboard/portfolio-performance-line-chart'
+import { PortfolioPerformanceLineChart } from '@/components/molecules/dashboard/chart'
 import { PortfolioPerformanceStats } from '@/components/molecules/dashboard/portfolio-performance-stats'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
