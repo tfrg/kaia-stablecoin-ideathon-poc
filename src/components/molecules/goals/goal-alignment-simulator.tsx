@@ -52,7 +52,7 @@ export function GoalAlignmentSimulator() {
       <div className='flex justify-end'>
         <Button
           // onClick={handleSimulate}
-          className='rounded-full bg-lime-400 px-6 font-medium text-black hover:bg-lime-500'
+          className='bg-[var(--button-primary-bg)] text-[var(--background)] hover:bg-[var(--button-secondary-bg)] hover:text-[var(--secondary-text)]'
         >
           시뮬레이션 실행
         </Button>

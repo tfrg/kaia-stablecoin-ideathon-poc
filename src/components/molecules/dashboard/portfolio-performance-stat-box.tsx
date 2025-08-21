@@ -9,11 +9,11 @@ export function PortfolioStatBox({
   label,
   value,
   highlightedValue,
-  valueColor = 'text-green-500',
+  valueColor = 'text-[var(--primary)]',
 }: PortfolioStatBoxProps): React.JSX.Element {
   return (
-    <div className='bg-muted rounded-md p-3 flex flex-col items-center'>
-      <span className='text-xs text-muted-foreground mb-1'>{label}</span>
+    <div className='bg-muted flex flex-col items-center rounded-md p-3'>
+      <span className='text-muted-foreground mb-1 text-xs'>{label}</span>
       <span className='text-sm font-medium'>
         {highlightedValue ? (
           <>

@@ -19,7 +19,7 @@ export function AssetTotalSummaryCard({
       <CardContent>
         <div className='flex flex-col'>
           <span className='text-2xl font-bold'>{value}</span>
-          <div className='flex items-center text-sm text-green-500'>
+          <div className='flex items-center text-sm text-[var(--primary)]'>
             <span>{subValue}</span>
           </div>
         </div>

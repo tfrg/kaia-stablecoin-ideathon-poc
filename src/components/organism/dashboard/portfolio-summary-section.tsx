@@ -17,14 +17,14 @@ export function PortfolioSummarySection(): React.JSX.Element {
         className='space-y-4'
       >
         <TabsContent value='overview' className='space-y-4'>
-          <div className='grid gap-4 grid-cols-1 md:grid-cols-12'>
-            <div className='col-span-1 md:col-span-5'>
+          <div className='grid grid-cols-1 gap-4 xl:grid-cols-12'>
+            <div className='col-span-1 xl:col-span-5'>
               <AssetDistributionCard chartData={assetDistributionChartData} />
             </div>
-            <div className='col-span-1 md:col-span-4'>
+            <div className='col-span-1 xl:col-span-4'>
               <AiInsightCard data={aiInsightData} />
             </div>
-            <div className='col-span-1 md:col-span-3'>
+            <div className='col-span-1 xl:col-span-3'>
               <AutomationSettingsCard data={automationSettingsData} />
             </div>
           </div>

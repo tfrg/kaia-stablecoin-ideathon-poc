@@ -10,12 +10,12 @@ export function RetirementGoalsSummaryCard(): React.JSX.Element {
       <CardContent>
         <div className='mb-3 h-4 max-w-[500px] rounded-full bg-gray-200'>
           <div
-            className='h-4 rounded-full bg-green-500'
+            className='h-4 rounded-full bg-[var(--primary)]'
             style={{ width: `${Math.min(102, 100)}%` }}
           ></div>
         </div>
 
-        <div className='mb-4 max-w-[500px] text-right text-sm text-lime-400'>
+        <div className='mb-4 max-w-[500px] text-right text-sm text-[var(--foreground)]'>
           102%
         </div>
 
@@ -54,10 +54,10 @@ export function RetirementGoalsSummaryCard(): React.JSX.Element {
         </div>
 
         <div className='flex justify-end gap-2'>
-          <Button variant='outline' className='text-gray-700'>
+          <Button className='bg-[var(--button-dark-bg)] text-[var(--secondary-text)] hover:bg-[var(--button-secondary-bg)]'>
             목표 수정
           </Button>
-          <Button className='bg-yellow-400 text-black hover:bg-yellow-500'>
+          <Button className='bg-[var(--button-primary-bg)] text-[var(--background)] hover:bg-[var(--button-secondary-bg)] hover:text-[var(--secondary-text)]'>
             목표 추가
           </Button>
         </div>

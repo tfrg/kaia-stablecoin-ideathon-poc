@@ -58,7 +58,7 @@ export function AssetListTable({ data }: AssetListTableProps) {
             <TableCell>{asset.weight}</TableCell>
             <TableCell
               className={
-                asset.performance.includes('+') ? 'text-green-500' : ''
+                asset.performance.includes('+') ? 'text-[var(--primary)]' : ''
               }
             >
               {asset.performance}

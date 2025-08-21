@@ -27,7 +27,9 @@ export function AssetTotalInfoCard({
         </div>
         <p
           className={
-            data.changePercentage >= 0 ? 'text-green-500' : 'text-red-500'
+            data.changePercentage >= 0
+              ? 'text-[var(--primary)]'
+              : 'text-red-500'
           }
         >
           {data.changePercentage >= 0 ? '+' : ''}

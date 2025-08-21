@@ -25,28 +25,28 @@ export function AssetRetirementProgressCard({
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <div className='h-4 w-full bg-gray-200 rounded-full mb-3'>
+        <div className='mb-3 h-4 w-full rounded-full bg-gray-200'>
           <div
-            className='h-4 bg-green-500 rounded-full'
+            className='h-4 rounded-full bg-[var(--primary)]'
             style={{ width: `${Math.min(data.fundingRatio, 100)}%` }}
           ></div>
         </div>
-        <div className='flex justify-between text-sm mb-2'>
+        <div className='mb-2 flex justify-between text-sm'>
           <span>현재: {formatCurrency(data.currentValue)}</span>
           <span>목표: {formatCurrency(data.targetValue)}</span>
         </div>
-        <div className='flex justify-between items-center'>
+        <div className='flex items-center justify-between'>
           <div className='flex space-x-2'>
-            <div className='w-3 h-3 bg-green-500 rounded-full mt-1'></div>
+            <div className='mt-1 h-3 w-3 rounded-md bg-[var(--primary)]'></div>
             <span className='text-sm'>현재 달성률</span>
           </div>
           <div className='flex space-x-2'>
-            <div className='w-3 h-3 bg-gray-300 rounded-full mt-1'></div>
+            <div className='mt-1 h-3 w-3 rounded-full bg-gray-300'></div>
             <span className='text-sm'>목표 기준</span>
           </div>
         </div>
         <div className='mt-3 text-center'>
-          <p className='text-lg font-bold text-green-600'>
+          <p className='text-lg font-bold text-[var(--primary)]'>
             은퇴 목표 충당률: {data.fundingRatio}%
           </p>
         </div>

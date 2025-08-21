@@ -6,7 +6,7 @@ export function GoalOptimizationCard(): React.JSX.Element {
     <Card className='gap-2'>
       <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
         <CardTitle className='font-bold'>AI 목표 최적화 추천</CardTitle>
-        <Button className='bg-olive-700 hover:bg-olive-600 rounded-full px-6 py-2 text-white'>
+        <Button className='hover:text-[var(--secondary-text rounded-full bg-[var(--button-secondary-bg)] text-[var(--primary-stroke)] hover:bg-[var(--button-secondary-bg)]'>
           추천 적용
         </Button>
       </CardHeader>

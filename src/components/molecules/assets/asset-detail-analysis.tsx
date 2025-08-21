@@ -21,7 +21,9 @@ export function AssetDetailAnalysis({ data }: AssetDetailAnalysisProps) {
             <div className='space-y-1 text-sm'>
               <p>{item.trend}</p>
               <p>{item.additionalInfo}</p>
-              {item.insight && <p className='text-green-500'>{item.insight}</p>}
+              {item.insight && (
+                <p className='text-[var(--primary)]'>{item.insight}</p>
+              )}
             </div>
           </CardContent>
         </Card>

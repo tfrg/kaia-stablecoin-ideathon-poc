@@ -21,7 +21,7 @@ export function AssetSummarySection(): React.JSX.Element {
         className='space-y-4'
       >
         <TabsContent value='overview' className='space-y-4'>
-          <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-4'>
+          <div className='grid gap-4 sm:grid-cols-2 xl:grid-cols-4'>
             <AssetTotalInfoCard data={assetTotalInfoData} />
             <AssetRetirementProgressCard data={retirementProgressInfoData} />
             <AssetPortfolioRiskCard data={portfolioRiskInfo} />
