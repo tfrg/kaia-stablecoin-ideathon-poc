@@ -1,7 +1,12 @@
-import { NavGroup } from '@/components/layout/types'
+import { NavItem } from '@/components/layout/types'
+
+interface NavGroupData {
+  title: string
+  items: NavItem[]
+}
 
 export interface SidebarData {
-  navGroups: NavGroup[]
+  navGroups: NavGroupData[]
 }
 
 /**
@@ -45,7 +50,7 @@ export const sidebarData: SidebarData = {
         },
         {
           title: 'AI 어시스턴트',
-          url: '/assistant',
+          url: '/ai-assistant',
         },
       ],
     },
