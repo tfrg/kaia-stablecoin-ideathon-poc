@@ -18,14 +18,14 @@ export function PerformanceSummarySection(): React.JSX.Element {
         className='space-y-4'
       >
         <TabsContent value='overview' className='space-y-4'>
-          <div className='grid gap-4 grid-cols1 lg:grid-cols-12'>
-            <div className='col-span-1 lg:col-span-6'>
+          <div className='grid-cols1 grid gap-4 xl:grid-cols-12'>
+            <div className='col-span-1 xl:col-span-5'>
               <PortfolioPerformanceCard
                 chartData={portfolioPerformanceData}
                 statData={portfolioPerformanceStatData}
               />
             </div>
-            <div className='col-span-1 lg:col-span-6'>
+            <div className='col-span-1 xl:col-span-7'>
               <DeFiYieldCard data={defiYieldData} />
             </div>
           </div>

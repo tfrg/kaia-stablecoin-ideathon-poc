@@ -33,7 +33,7 @@ export function AssetTotalSummarySection(): React.JSX.Element {
         className='space-y-4'
       >
         <TabsContent value='overview' className='space-y-4'>
-          <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+          <div className='grid gap-4 lg:grid-cols-3'>
             {cardData.map((card, index) => (
               <AssetTotalSummaryCard
                 key={index}

@@ -29,14 +29,13 @@ export function AssetListTable({ data }: AssetListTableProps) {
   return (
     <Table>
       <TableHeader>
-        <TableRow>
+        <TableRow className='hover:bg-transparent'>
           {TABLE_HEADERS.map((header, index) => (
             <TableHead key={index}>{header}</TableHead>
           ))}
         </TableRow>
       </TableHeader>
       <TableBody className='[&>tr:nth-child(odd)]:bg-[var(--surface-02)]'>
-        {/* <TableBody> */}
         {data.map((asset) => (
           <TableRow key={asset.id} className='hover:bg-transparent'>
             <TableCell className='font-medium'>
