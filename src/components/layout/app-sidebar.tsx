@@ -5,6 +5,7 @@ import { sidebarData } from '@/data/common'
 import { NavGroup } from '@/components/layout/nav-group'
 
 import { Sidebar, SidebarContent, SidebarHeader } from '@/components/ui/sidebar'
+import KaiaPortLogo from '@/components/ui/kaia-port-logo'
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const location = useLocation()
@@ -13,13 +14,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar className='w-64'>
       <SidebarHeader className='p-5'>
-        <Link className='w-[120px]' to={'/'}>
-          <img
-            className='justify-start'
-            src='/kaia-port-logo.svg'
-            alt='KaiaPort Logo'
-          />
-        </Link>
+        <KaiaPortLogo />
       </SidebarHeader>
       <SidebarContent>
         {sidebarData.navGroups.map((props) => (
