@@ -19,7 +19,7 @@ export function Header({
   return (
     <header
       className={cn(
-        'header flex w-full place-content-between items-center border-b p-4 md:justify-end'
+        'header flex w-full place-content-between items-center border-b-1 p-4 md:justify-end'
       )}
       {...props}
     >
