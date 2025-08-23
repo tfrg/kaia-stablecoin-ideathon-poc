@@ -1,23 +1,17 @@
 import { DashboardGridLayout } from '@/components/layout/dashboard-grid-layout'
 import { ChatMessageContainer } from '@/components/molecules/ai-assistant/chat-message-container'
-import { AiAssistantChatStep1 } from '@/components/molecules/ai-assistant/ai-chat/ai-assistant-chat-step1'
-import { AiAssistantChatStep2 } from '@/components/molecules/ai-assistant/ai-chat/ai-assistant-chat-step2'
-import { AiAssistantChatStep3 } from '@/components/molecules/ai-assistant/ai-chat/ai-assistant-chat-step3'
-import { AiAssistantChatStep4 } from '@/components/molecules/ai-assistant/ai-chat/ai-assistant-chat-step4'
-import { AiAssistantChatStep5 } from '@/components/molecules/ai-assistant/ai-chat/ai-assistant-chat-step5'
-
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import {
+  AiAssistantChatStep1,
+  AiAssistantChatStep2,
+  AiAssistantChatStep3,
+  AiAssistantChatStep4,
+  AiAssistantChatStep5,
+  AiAssistantChatStep7,
+  AiAssistantChatStep8,
+} from '@/components/molecules/ai-assistant/ai-chat'
+import { KaiaPortAiBotAvatar } from '@/components/molecules/ai-assistant/kaia-port-ai-avatar'
 
 export default function AiAssistant() {
-  const KaiaPortAiBotAvatar = (
-    <Avatar className='h-[36px] w-[36px]'>
-      <AvatarImage
-        src={'/kaia-port-ai-bot.svg'}
-        alt={'KaiaPort AI Bot image'}
-      />
-      <AvatarFallback>AI</AvatarFallback>
-    </Avatar>
-  )
   return (
     <DashboardGridLayout>
       <ChatMessageContainer avatar={KaiaPortAiBotAvatar}>
@@ -38,6 +32,14 @@ export default function AiAssistant() {
 
       <ChatMessageContainer avatar={KaiaPortAiBotAvatar}>
         <AiAssistantChatStep5 />
+      </ChatMessageContainer>
+
+      <ChatMessageContainer avatar={KaiaPortAiBotAvatar}>
+        <AiAssistantChatStep7 />
+      </ChatMessageContainer>
+
+      <ChatMessageContainer avatar={KaiaPortAiBotAvatar}>
+        <AiAssistantChatStep8 />
       </ChatMessageContainer>
     </DashboardGridLayout>
   )

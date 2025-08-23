@@ -1,4 +1,4 @@
-import { ChatText } from '@/components/ui/chat-text'
+import { ChatText, ChatEmphasisText } from '@/components/ui/chat-text'
 
 export function AiAssistantChatStep5(): React.JSX.Element {
   return (
@@ -7,7 +7,8 @@ export function AiAssistantChatStep5(): React.JSX.Element {
       <br />
       <br />
       <ChatText>
-        지금까지 제공해주신 정보를 바탕으로 포트폴리오 모델을 계산하겠습니다.{' '}
+        지금까지 제공해주신 정보를 바탕으로{' '}
+        <ChatEmphasisText>포트폴리오 모델</ChatEmphasisText>을 계산하겠습니다.{' '}
         <br />
         카이아 블록체인의 시가총액 상위 20개 코인과 디파이 토큰을 고려하여{' '}
         <br />

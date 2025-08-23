@@ -29,6 +29,10 @@ export const sidebarData: SidebarData = {
       title: 'General',
       items: [
         {
+          title: '목표 설정',
+          url: '/ai-assistant',
+        },
+        {
           title: '대시보드',
           url: '/',
         },
@@ -47,10 +51,6 @@ export const sidebarData: SidebarData = {
         {
           title: '알림 센터',
           url: '/notification',
-        },
-        {
-          title: 'AI 어시스턴트',
-          url: '/ai-assistant',
         },
       ],
     },

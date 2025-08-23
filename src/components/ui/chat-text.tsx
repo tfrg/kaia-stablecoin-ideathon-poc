@@ -1,5 +1,7 @@
 import { cn } from '@/lib/utils'
 
+import { Box } from '@/components/ui/box'
+
 interface ChatTextProps {
   children: React.ReactNode
   className?: string
@@ -21,9 +23,9 @@ export function ChatEmphasisText({ children }: { children: React.ReactNode }) {
 }
 
 export function ChatMutedText({ children }: { children: React.ReactNode }) {
-  return (
-    <span className='text-[var(--secondary-text)]'>
-      <b>{children}</b>
-    </span>
-  )
+  return <span className='text-[var(--secondary-text)]'>{children}</span>
+}
+
+export function ChatContentBox({ children }: { children: React.ReactNode }) {
+  return <Box className='bg-[var(--background)]'>{children}</Box>
 }
