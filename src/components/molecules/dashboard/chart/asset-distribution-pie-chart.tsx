@@ -26,9 +26,9 @@ export function AssetDistributionPieChart({
     return (
       <ul className='list-none pl-0'>
         {payload.map((entry, index) => (
-          <li key={`item-${index}`} className='flex items-center mb-2'>
+          <li key={`item-${index}`} className='mb-2 flex items-center'>
             <div
-              className='w-3 h-3 mr-2'
+              className='mr-2 h-3 w-3'
               style={{ backgroundColor: entry.color }}
             />
             <span className='text-sm'>

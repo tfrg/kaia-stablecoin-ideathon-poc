@@ -4,16 +4,16 @@ import {
   AiAssistantMessage,
   ChatInputField,
 } from '@/components/molecules/ai-assistant/ai-chat'
+import { ChatOptionButtons } from '@/components/molecules/ai-assistant/chat-option-buttons'
 
-import { CardContent } from '@/components/ui/card'
 import {
   ChatText,
   ChatEmphasisText,
   ChatMutedText,
   ChatContentBox,
   ChatContentBoxHeader,
+  ChatContentWrapper,
 } from '@/components/ui/chat-text'
-import { ChatOptionButtons } from '../chat-option-buttons'
 
 export function AiAssistantChatStep2(): React.JSX.Element {
   const retirementOptions = [
@@ -49,7 +49,7 @@ export function AiAssistantChatStep2(): React.JSX.Element {
           title='은퇴 목표 세부 정보'
           description='은퇴 계획에 대한 세부 정보를 입력해 주세요'
         />
-        <CardContent className='flex flex-col gap-5 p-0'>
+        <ChatContentWrapper>
           <ChatInputField label='현재 나이 대비 은퇴 예상 나이'>
             <ChatOptionButtons options={retirementOptions} />
           </ChatInputField>
@@ -98,7 +98,7 @@ export function AiAssistantChatStep2(): React.JSX.Element {
               (월 300 KAIA × 12개월 × 30년 예상 은퇴 기간 × 인플레이션 고려)
             </AiAssistantMessage>
           </div>
-        </CardContent>
+        </ChatContentWrapper>
       </ChatContentBox>
     </article>
   )

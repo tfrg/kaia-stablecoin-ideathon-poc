@@ -6,6 +6,7 @@ import {
   AiAssistantChatStep3,
   AiAssistantChatStep4,
   AiAssistantChatStep5,
+  AiAssistantChatStep6,
   AiAssistantChatStep7,
   AiAssistantChatStep8,
 } from '@/components/molecules/ai-assistant/ai-chat'
@@ -32,6 +33,10 @@ export default function AiAssistant() {
 
       <ChatMessageContainer avatar={KaiaPortAiBotAvatar}>
         <AiAssistantChatStep5 />
+      </ChatMessageContainer>
+
+      <ChatMessageContainer avatar={KaiaPortAiBotAvatar}>
+        <AiAssistantChatStep6 />
       </ChatMessageContainer>
 
       <ChatMessageContainer avatar={KaiaPortAiBotAvatar}>

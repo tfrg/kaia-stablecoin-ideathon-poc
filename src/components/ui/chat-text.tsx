@@ -1,7 +1,12 @@
 import { cn } from '@/lib/utils'
 
 import { Box } from '@/components/ui/box'
-import { CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import {
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
 
 interface ChatTextProps {
   children: React.ReactNode
@@ -56,5 +61,19 @@ export function ChatContentBoxHeader({
       {description && <CardDescription>{description}</CardDescription>}
       {children}
     </CardHeader>
+  )
+}
+
+export function ChatContentWrapper({
+  className,
+  children,
+}: {
+  className?: string
+  children?: React.ReactNode
+}) {
+  return (
+    <CardContent className={cn('flex flex-col gap-5 p-0', className)}>
+      {children}
+    </CardContent>
   )
 }
