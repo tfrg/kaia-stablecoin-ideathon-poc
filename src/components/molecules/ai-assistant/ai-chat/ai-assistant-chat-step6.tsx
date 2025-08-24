@@ -98,10 +98,9 @@ export function AiAssistantChatStep6(): React.JSX.Element {
               </div>
               <ChatContentWrapper className='rounded-md bg-[var(--surface-01)] p-3'>
                 <ChatText>
-                  현재 계획으로는 목표 금액의 약 92%를 달성할 수 <br />
-                  있으며, 목표 달성 확률은 78%입니다. 목표 달성
-                  <br />
-                  확률을 높이기 위한 개선안을 확인해보세요.
+                  현재 계획으로는 목표 금액의 약 92%를 달성할 수 있으며, 목표
+                  달성 확률은 78%입니다. 목표 달성 확률을 높이기 위한 개선안을
+                  확인해보세요.
                 </ChatText>
               </ChatContentWrapper>
             </ChatContentWrapper>
@@ -128,7 +127,7 @@ export function AiAssistantChatStep6(): React.JSX.Element {
         </div>
       </ChatContentBox>
 
-      {/* <ChatContentBox>
+      <ChatContentBox className='w-fit'>
         <ChatContentBoxHeader
           title='최종 포트폴리오 확정'
           description='개선된 계획으로 최종 포트폴리오가 작성되었습니다'
@@ -137,45 +136,9 @@ export function AiAssistantChatStep6(): React.JSX.Element {
         <div className='grid gap-2'>
           <AiAssistantMessage>
             월 납입액을 150 KAIA로 조정하여 최종 포트폴리오를 계산했습니다. 이제
-            자산 충당률이 108%로 <br />
-            향상되어 목표 달성이 가능해졌습니다. 목표 달성 확률도 92%로 크게
-            개선되었습니다. <br />
-            아래 최종 포트폴리오 정보를 확인하고 다음 단계로 진행해 주세요.{' '}
-            <br />
-          </AiAssistantMessage>
-
-          <div className='grid grid-cols-2 gap-2'>
-            <ChatContentWrapper className='gap-2 rounded-md border bg-[var(--surface-03)] px-3 py-2'>
-              <div>
-                <ChatText>
-                  <b>최종 포트폴리오 구성</b>
-                </ChatText>
-              </div>
-            </ChatContentWrapper>
-            <ChatContentWrapper className='gap-2 rounded-md border bg-[var(--surface-03)] px-3 py-2'>
-              <div>
-                <ChatText>
-                  <b>최종 성과 지표</b>
-                </ChatText>
-              </div>
-            </ChatContentWrapper>
-          </div>
-        </div>
-      </ChatContentBox> */}
-      <ChatContentBox>
-        <ChatContentBoxHeader
-          title='최종 포트폴리오 확정'
-          description='개선된 계획으로 최종 포트폴리오가 작성되었습니다'
-        />
-
-        <div className='grid gap-2'>
-          <AiAssistantMessage>
-            월 납입액을 150 KAIA로 조정하여 최종 포트폴리오를 계산했습니다. 이제
-            자산 충당률이 108%로 <br />
-            향상되어 목표 달성이 가능해졌습니다. 목표 달성 확률도 92%로 크게
-            개선되었습니다. <br />
-            아래 최종 포트폴리오 정보를 확인하고 다음 단계로 진행해 주세요.{' '}
-            <br />
+            자산 충당률이 108%로 향상되어 목표 달성이 가능해졌습니다. 목표 달성
+            확률도 92%로 크게 개선되었습니다. 아래 최종 포트폴리오 정보를
+            확인하고 다음 단계로 진행해 주세요.{' '}
           </AiAssistantMessage>
           <div className='grid gap-2 lg:grid-cols-2'>
             <ChatContentWrapper className='gap-2 rounded-md border bg-[var(--surface-03)] px-3 py-2'>
@@ -202,7 +165,7 @@ export function AiAssistantChatStep6(): React.JSX.Element {
                   <tbody>
                     {portfolioAssets.map((item) => (
                       <tr key={item.index}>
-                        <td className='py-3 text-left'>
+                        <td className='py-2 text-left'>
                           <div className='flex items-center gap-2'>
                             <div
                               className={`h-4 w-4 rounded-sm bg-[var(--chart-${item.index})] `}
@@ -210,15 +173,15 @@ export function AiAssistantChatStep6(): React.JSX.Element {
                             <span>{item.asset}</span>
                           </div>
                         </td>
-                        <td className='py-3 text-right'>{item.ratio}</td>
-                        <td className='py-3 text-right'>{item.amount}</td>
+                        <td className='py-2 text-right'>{item.ratio}</td>
+                        <td className='py-2 text-right'>{item.amount}</td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
               </div>
             </ChatContentWrapper>
-            <ChatContentWrapper className='gap-2 rounded-md border bg-[var(--surface-03)] px-3 py-2'>
+            <ChatContentWrapper className='max-w-[250px] gap-2 rounded-md border bg-[var(--surface-03)] px-3 py-2'>
               <div>
                 <ChatText>
                   <b>최종 성과 지표</b>

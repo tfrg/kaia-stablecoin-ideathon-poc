@@ -13,7 +13,9 @@ export function AiAssistantMessage({
   className,
 }: AiAssistantMessageProps) {
   return (
-    <ChatMessageBox className={`flex items-center gap-2 ${className}`}>
+    <ChatMessageBox
+      className={`flex max-w-[760px] items-center gap-2 ${className}`}
+    >
       <div>{KaiaPortAiBotAvatar}</div>
       <div className='rounded-md border bg-[var(--surface-01)] p-2'>
         <ChatText className='text-sm/4'>{children}</ChatText>
