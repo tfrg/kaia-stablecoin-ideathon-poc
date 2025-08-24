@@ -1,3 +1,6 @@
+import { ChatMessageBox } from '@/components/molecules/ai-assistant/chat-message-box'
+import { KaiaPortAiBotAvatar } from '@/components/molecules/ai-assistant/kaia-port-ai-avatar'
+
 import {
   Card,
   CardContent,
@@ -9,10 +12,7 @@ import {
   ChatText,
   ChatEmphasisText,
   ChatMutedText,
-  ChatContentBox,
 } from '@/components/ui/chat-text'
-import KaiaPortLogo from '@/components/ui/kaia-port-logo'
-import { KaiaPortAiBotAvatar } from '../kaia-port-ai-avatar'
 
 export function AiAssistantChatStep2(): React.JSX.Element {
   return (
@@ -69,72 +69,66 @@ export function AiAssistantChatStep2(): React.JSX.Element {
             <ChatText>
               <b>목표 금액</b>
             </ChatText>
-            <Card className='rounded-md border p-4'>
-              <CardContent className='p-0'>
-                <ChatText>
-                  <ChatMutedText>
-                    KAIA 직접 입력하거나 아래 계산기를 통해 추정할 수 있습니다
-                  </ChatMutedText>
-                </ChatText>
-              </CardContent>
-            </Card>
+            <ChatMessageBox>
+              <ChatText>
+                <ChatMutedText>
+                  KAIA 직접 입력하거나 아래 계산기를 통해 추정할 수 있습니다
+                </ChatMutedText>
+              </ChatText>
+            </ChatMessageBox>
 
-            <Card className='rounded-md border p-4'>
-              <CardContent className='p-0'>
-                <ChatText>
-                  <b>목표 금액 계산기</b>
-                </ChatText>
+            <ChatMessageBox>
+              <ChatText>
+                <b>목표 금액 계산기</b>
+              </ChatText>
 
-                <div className='flex gap-4'>
-                  <div className='flex flex-1 flex-col xl:min-w-[200px]'>
-                    <ChatText>
-                      <ChatMutedText>은퇴 후 월 지출 예상</ChatMutedText>
-                    </ChatText>
-                    <div className='rounded-md border bg-[var(--surface-01)] p-2'>
-                      <ChatText>
-                        <b>300</b>
-                        <ChatMutedText>&nbsp;KAIA</ChatMutedText>
-                      </ChatText>
-                    </div>
-                  </div>
-                  <div className='flex flex-1 flex-col xl:min-w-[200px]'>
-                    <ChatText>
-                      <ChatMutedText>은퇴 후 예상 기간</ChatMutedText>
-                    </ChatText>
-                    <div className='rounded-md border bg-[var(--surface-01)] p-2'>
-                      <ChatText>
-                        <b>30</b>
-                        <ChatMutedText>&nbsp;년</ChatMutedText>
-                      </ChatText>
-                    </div>
-                  </div>
-                  <div className='flex flex-1 flex-col xl:min-w-[200px]'>
-                    <ChatText>
-                      <ChatMutedText>예상 필요 금액</ChatMutedText>
-                    </ChatText>
-                    <div className='rounded-md border bg-[var(--surface-01)] p-2'>
-                      <ChatText>
-                        <b>108,000</b>
-                        <ChatMutedText>&nbsp;KAIA</ChatMutedText>
-                      </ChatText>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className='rounded-md border p-4'>
-              <CardContent className='flex items-center gap-2 p-0'>
-                <div>{KaiaPortAiBotAvatar}</div>
-                <div className='rounded-md border bg-[var(--surface-01)] p-2'>
-                  <ChatText className='text-sm/4'>
-                    월 300 KAIA 기준으로 15년 후 은퇴 시 필요한 목표 금액은 약
-                    108,000 KAIA이 될 것 같습니다. <br />
-                    (월 300 KAIA × 12개월 × 30년 예상 은퇴 기간 × 인플레이션
-                    고려)
+              <div className='flex gap-4'>
+                <div className='flex flex-1 flex-col xl:min-w-[200px]'>
+                  <ChatText>
+                    <ChatMutedText>은퇴 후 월 지출 예상</ChatMutedText>
                   </ChatText>
+                  <div className='rounded-md border bg-[var(--surface-01)] p-2'>
+                    <ChatText>
+                      <b>300</b>
+                      <ChatMutedText>&nbsp;KAIA</ChatMutedText>
+                    </ChatText>
+                  </div>
                 </div>
-              </CardContent>
-            </Card>
+                <div className='flex flex-1 flex-col xl:min-w-[200px]'>
+                  <ChatText>
+                    <ChatMutedText>은퇴 후 예상 기간</ChatMutedText>
+                  </ChatText>
+                  <div className='rounded-md border bg-[var(--surface-01)] p-2'>
+                    <ChatText>
+                      <b>30</b>
+                      <ChatMutedText>&nbsp;년</ChatMutedText>
+                    </ChatText>
+                  </div>
+                </div>
+                <div className='flex flex-1 flex-col xl:min-w-[200px]'>
+                  <ChatText>
+                    <ChatMutedText>예상 필요 금액</ChatMutedText>
+                  </ChatText>
+                  <div className='rounded-md border bg-[var(--surface-01)] p-2'>
+                    <ChatText>
+                      <b>108,000</b>
+                      <ChatMutedText>&nbsp;KAIA</ChatMutedText>
+                    </ChatText>
+                  </div>
+                </div>
+              </div>
+            </ChatMessageBox>
+
+            <ChatMessageBox className='flex items-center gap-2'>
+              <div>{KaiaPortAiBotAvatar}</div>
+              <div className='rounded-md border bg-[var(--surface-01)] p-2'>
+                <ChatText className='text-sm/4'>
+                  월 300 KAIA 기준으로 15년 후 은퇴 시 필요한 목표 금액은 약
+                  108,000 KAIA이 될 것 같습니다. <br />
+                  (월 300 KAIA × 12개월 × 30년 예상 은퇴 기간 × 인플레이션 고려)
+                </ChatText>
+              </div>
+            </ChatMessageBox>
           </div>
         </CardContent>
       </Card>
