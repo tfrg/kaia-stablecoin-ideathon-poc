@@ -13,8 +13,17 @@ import {
   ChatContentBox,
   ChatContentBoxHeader,
 } from '@/components/ui/chat-text'
+import { ChatOptionButtons } from '../chat-option-buttons'
 
 export function AiAssistantChatStep2(): React.JSX.Element {
+  const retirementOptions = [
+    { text: '5년 미만' },
+    { text: '5-15년', isActive: true },
+    { text: '15-25년' },
+    { text: '25년 이상' },
+    { text: '직접 입력' },
+  ]
+
   return (
     <article>
       <ChatText>
@@ -41,28 +50,9 @@ export function AiAssistantChatStep2(): React.JSX.Element {
           description='은퇴 계획에 대한 세부 정보를 입력해 주세요'
         />
         <CardContent className='flex flex-col gap-5 p-0'>
-          <div>
-            <ChatText>
-              <b>현재 나이 대비 은퇴 예상 나이</b>
-            </ChatText>
-            <div className='flex w-full overflow-hidden rounded-md border'>
-              <button className='flex-1 bg-[var(--surface-03)] py-3 text-sm text-white hover:bg-gray-700'>
-                5년 미만
-              </button>
-              <button className='flex-1 bg-[var(--primary-badge)] py-3 text-sm text-white'>
-                5-15년
-              </button>
-              <button className='flex-1 bg-[var(--surface-03)] py-3 text-sm text-white hover:bg-gray-700'>
-                15-25년
-              </button>
-              <button className='flex-1 bg-[var(--surface-03)] py-3 text-sm text-white hover:bg-gray-700'>
-                25년 이상
-              </button>
-              <button className='flex-1 bg-[var(--surface-03)] py-3 text-sm text-white hover:bg-gray-700'>
-                직접 입력
-              </button>
-            </div>
-          </div>
+          <ChatInputField label='현재 나이 대비 은퇴 예상 나이'>
+            <ChatOptionButtons options={retirementOptions} />
+          </ChatInputField>
 
           <ChatInputField label='목표 금액'>
             <ChatMessageBox>
