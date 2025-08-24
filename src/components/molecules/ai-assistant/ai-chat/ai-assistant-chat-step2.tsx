@@ -1,17 +1,17 @@
 import { ChatMessageBox } from '@/components/molecules/ai-assistant/chat-message-box'
-import { KaiaPortAiBotAvatar } from '@/components/molecules/ai-assistant/kaia-port-ai-avatar'
-
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
+  ChatValueDisplay,
+  AiAssistantMessage,
+  ChatInputField,
+} from '@/components/molecules/ai-assistant/ai-chat'
+
+import { CardContent } from '@/components/ui/card'
 import {
   ChatText,
   ChatEmphasisText,
   ChatMutedText,
+  ChatContentBox,
+  ChatContentBoxHeader,
 } from '@/components/ui/chat-text'
 
 export function AiAssistantChatStep2(): React.JSX.Element {
@@ -35,13 +35,11 @@ export function AiAssistantChatStep2(): React.JSX.Element {
       <br />
       <br />
 
-      <Card className='rounded-md border bg-[var(--background)] px-6 py-4'>
-        <CardHeader className='p-0'>
-          <CardTitle>은퇴 목표 세부 정보</CardTitle>
-          <CardDescription>
-            은퇴 계획에 대한 세부 정보를 입력해 주세요
-          </CardDescription>
-        </CardHeader>
+      <ChatContentBox>
+        <ChatContentBoxHeader
+          title='은퇴 목표 세부 정보'
+          description='은퇴 계획에 대한 세부 정보를 입력해 주세요'
+        />
         <CardContent className='flex flex-col gap-5 p-0'>
           <div>
             <ChatText>
@@ -65,10 +63,8 @@ export function AiAssistantChatStep2(): React.JSX.Element {
               </button>
             </div>
           </div>
-          <div className='flex flex-col gap-2'>
-            <ChatText>
-              <b>목표 금액</b>
-            </ChatText>
+
+          <ChatInputField label='목표 금액'>
             <ChatMessageBox>
               <ChatText>
                 <ChatMutedText>
@@ -76,7 +72,9 @@ export function AiAssistantChatStep2(): React.JSX.Element {
                 </ChatMutedText>
               </ChatText>
             </ChatMessageBox>
+          </ChatInputField>
 
+          <div className='flex flex-col gap-2'>
             <ChatMessageBox>
               <ChatText>
                 <b>목표 금액 계산기</b>
@@ -87,51 +85,31 @@ export function AiAssistantChatStep2(): React.JSX.Element {
                   <ChatText>
                     <ChatMutedText>은퇴 후 월 지출 예상</ChatMutedText>
                   </ChatText>
-                  <div className='rounded-md border bg-[var(--surface-01)] p-2'>
-                    <ChatText>
-                      <b>300</b>
-                      <ChatMutedText>&nbsp;KAIA</ChatMutedText>
-                    </ChatText>
-                  </div>
+                  <ChatValueDisplay value={'300'} unit='KAIA' />
                 </div>
                 <div className='flex flex-1 flex-col xl:min-w-[200px]'>
                   <ChatText>
                     <ChatMutedText>은퇴 후 예상 기간</ChatMutedText>
                   </ChatText>
-                  <div className='rounded-md border bg-[var(--surface-01)] p-2'>
-                    <ChatText>
-                      <b>30</b>
-                      <ChatMutedText>&nbsp;년</ChatMutedText>
-                    </ChatText>
-                  </div>
+                  <ChatValueDisplay value='30' unit='년' />
                 </div>
                 <div className='flex flex-1 flex-col xl:min-w-[200px]'>
                   <ChatText>
                     <ChatMutedText>예상 필요 금액</ChatMutedText>
                   </ChatText>
-                  <div className='rounded-md border bg-[var(--surface-01)] p-2'>
-                    <ChatText>
-                      <b>108,000</b>
-                      <ChatMutedText>&nbsp;KAIA</ChatMutedText>
-                    </ChatText>
-                  </div>
+                  <ChatValueDisplay value='108,000' unit='KAIA' />
                 </div>
               </div>
             </ChatMessageBox>
 
-            <ChatMessageBox className='flex items-center gap-2'>
-              <div>{KaiaPortAiBotAvatar}</div>
-              <div className='rounded-md border bg-[var(--surface-01)] p-2'>
-                <ChatText className='text-sm/4'>
-                  월 300 KAIA 기준으로 15년 후 은퇴 시 필요한 목표 금액은 약
-                  108,000 KAIA이 될 것 같습니다. <br />
-                  (월 300 KAIA × 12개월 × 30년 예상 은퇴 기간 × 인플레이션 고려)
-                </ChatText>
-              </div>
-            </ChatMessageBox>
+            <AiAssistantMessage>
+              월 300 KAIA 기준으로 15년 후 은퇴 시 필요한 목표 금액은 약 108,000
+              KAIA이 될 것 같습니다. <br />
+              (월 300 KAIA × 12개월 × 30년 예상 은퇴 기간 × 인플레이션 고려)
+            </AiAssistantMessage>
           </div>
         </CardContent>
-      </Card>
+      </ChatContentBox>
     </article>
   )
 }

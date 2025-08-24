@@ -5,3 +5,7 @@ export * from './ai-assistant-chat-step4'
 export * from './ai-assistant-chat-step5'
 export * from './ai-assistant-chat-step7'
 export * from './ai-assistant-chat-step8'
+
+export * from './ai-assistant-message'
+export * from './chat-input-field'
+export * from './chat-value-display'

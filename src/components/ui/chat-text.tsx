@@ -1,6 +1,7 @@
 import { cn } from '@/lib/utils'
 
 import { Box } from '@/components/ui/box'
+import { CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
 interface ChatTextProps {
   children: React.ReactNode
@@ -26,6 +27,34 @@ export function ChatMutedText({ children }: { children: React.ReactNode }) {
   return <span className='text-[var(--secondary-text)]'>{children}</span>
 }
 
-export function ChatContentBox({ children }: { children: React.ReactNode }) {
-  return <Box className='bg-[var(--background)]'>{children}</Box>
+export function ChatContentBox({
+  className,
+  children,
+}: {
+  className?: string
+  children: React.ReactNode
+}) {
+  return (
+    <Box className={cn('bg-[var(--background)] px-6 py-4', className)}>
+      {children}
+    </Box>
+  )
+}
+
+export function ChatContentBoxHeader({
+  title,
+  description,
+  children,
+}: {
+  title: string
+  description?: string
+  children?: React.ReactNode
+}) {
+  return (
+    <CardHeader className='mb-5 p-0'>
+      <CardTitle>{title}</CardTitle>
+      {description && <CardDescription>{description}</CardDescription>}
+      {children}
+    </CardHeader>
+  )
 }
