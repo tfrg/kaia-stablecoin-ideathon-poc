@@ -30,11 +30,11 @@ export const sidebarData: SidebarData = {
       items: [
         {
           title: '목표 설정',
-          url: '/ai-assistant',
+          url: '/',
         },
         {
           title: '대시보드',
-          url: '/',
+          url: '/dashboard',
         },
         {
           title: '목표 관리',

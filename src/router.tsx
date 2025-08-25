@@ -16,12 +16,12 @@ export default function Router() {
     <Suspense fallback={<Loader />}>
       <Routes>
         <Route element={<AppDashboardLayout />}>
-          <Route path='/' element={<Dashboard />} />
+          <Route path='/' element={<AiAssistant />} />
+          <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/goals' element={<Goals />} />
           <Route path='/assets' element={<Assets />} />
           <Route path='/setting' element={<Setting />} />
           <Route path='/notification' element={<Notification />} />
-          <Route path='/ai-assistant' element={<AiAssistant />} />
         </Route>
       </Routes>
     </Suspense>
