@@ -20,23 +20,35 @@ export function AiAssistantChatStep1(): React.JSX.Element {
       <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
         <InvestmentGoalCard
           title='은퇴 자금'
+          imageSrc='/ai-assistant/ai-assistant-goal1.png'
           description='장기 목표 자금 마련'
           selected={true}
         />
         <InvestmentGoalCard
           title='교육 자금'
+          imageSrc='/ai-assistant/ai-assistant-goal2.png'
           description='중기 목표 자금 마련'
         />
         <InvestmentGoalCard
           title='주택 구매'
+          imageSrc='/ai-assistant/ai-assistant-goal3.png'
           description='중장기 목표 자금 마련'
         />
-        <InvestmentGoalCard title='여행' description='단기 목표 자금 마련' />
+        <InvestmentGoalCard
+          title='여행'
+          imageSrc='/ai-assistant/ai-assistant-goal4.png'
+          description='단기 목표 자금 마련'
+        />
         <InvestmentGoalCard
           title='가족 지원'
+          imageSrc='/ai-assistant/ai-assistant-goal5.png'
           description='장기적인 가족 재정 지원'
         />
-        <InvestmentGoalCard title='일반 투자' description='중장기 자산 증식' />
+        <InvestmentGoalCard
+          title='일반 투자'
+          imageSrc='/ai-assistant/ai-assistant-goal6.png'
+          description='중장기 자산 증식'
+        />
       </div>
     </article>
   )
