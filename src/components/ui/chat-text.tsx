@@ -47,16 +47,18 @@ export function ChatContentBox({
 }
 
 export function ChatContentBoxHeader({
+  className,
   title,
   description,
   children,
 }: {
+  className?: string
   title: string
   description?: string
   children?: React.ReactNode
 }) {
   return (
-    <CardHeader className='mb-5 p-0'>
+    <CardHeader className={cn('mb-5 p-0', className)}>
       <CardTitle>{title}</CardTitle>
       {description && <CardDescription>{description}</CardDescription>}
       {children}
