@@ -41,9 +41,7 @@ const wallets = [
 ]
 
 export function AiAssistantChatStep7(): React.JSX.Element {
-  const [selectedWallet, setSelectedWallet] = React.useState<string>(
-    wallets[0].id
-  )
+  const [selectedWallet] = React.useState<string>(wallets[0].id)
 
   return (
     <article>

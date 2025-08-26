@@ -1,8 +1,7 @@
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import {
   SidebarGroup,
-  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -28,7 +27,7 @@ import { Badge } from '@/components/ui/badge'
 
 import { NavCollapsible, NavGroup, NavItem, NavLink } from './types'
 
-export function NavGroup({ title, items, currentPath }: NavGroup) {
+export function NavGroup({ items, currentPath }: NavGroup) {
   const { state, isMobile } = useSidebar()
 
   return (

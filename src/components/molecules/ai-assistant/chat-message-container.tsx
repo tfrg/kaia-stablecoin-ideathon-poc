@@ -1,5 +1,4 @@
 import { Box } from '@/components/ui/box'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 interface ChatMessageContainerProps {
   avatar: React.ReactNode

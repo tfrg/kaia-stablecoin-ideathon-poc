@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 import { sidebarData } from '@/data/common'
 
@@ -12,7 +12,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const currentPath = location.pathname
 
   return (
-    <Sidebar className='w-64'>
+    <Sidebar className='w-64' {...props}>
       <SidebarHeader className='p-5'>
         <KaiaPortLogo />
       </SidebarHeader>

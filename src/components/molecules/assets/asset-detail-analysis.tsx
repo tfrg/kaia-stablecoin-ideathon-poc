@@ -1,7 +1,6 @@
 import { AssetDetailAnalysisData } from '@/types/assets'
 
 import { Card, CardContent } from '@/components/ui/card'
-import { Box } from '@/components/ui/box'
 
 interface AssetDetailAnalysisProps {
   data: AssetDetailAnalysisData[]

@@ -9,7 +9,6 @@ interface InsightItemProps {
 export function AiInsightItem({
   category,
   content,
-  isHighlighted = false,
 }: InsightItemProps): React.JSX.Element {
   return (
     <Box>
