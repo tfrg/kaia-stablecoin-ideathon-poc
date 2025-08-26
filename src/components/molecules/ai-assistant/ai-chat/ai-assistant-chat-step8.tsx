@@ -1,5 +1,5 @@
 import React from 'react'
-import { Circle } from 'lucide-react'
+import { Check, Circle } from 'lucide-react'
 
 import {
   ChatText,
@@ -11,6 +11,8 @@ import {
 import { ChatMessageBox } from '../chat-message-box'
 import { ChatInputField } from './chat-input-field'
 import { cn } from '@/lib/utils'
+import { Button } from '@/components/ui/button'
+import { Link } from 'react-router-dom'
 
 export function AiAssistantChatStep8(): React.JSX.Element {
   return (
@@ -88,6 +90,121 @@ export function AiAssistantChatStep8(): React.JSX.Element {
                 </ChatMessageBox>
               </ChatInputField>
             </div>
+          </div>
+        </ChatContentBox>
+
+        <ChatContentBox className='grid w-full items-center gap-6'>
+          <div className='flex justify-center'>
+            <div className='flex h-[140px] w-[140px] items-center justify-center rounded-full bg-[var(--surface-03)]'>
+              <div className='flex h-[120px] w-[120px] items-center justify-center rounded-full border border-[color:var(--primary)] bg-[var(--primary-badge)]'>
+                <Check strokeWidth={1} size={60} color={'var(--primary)'} />
+              </div>
+            </div>
+          </div>
+
+          <div className='flex justify-center'>
+            <div className='flex w-full max-w-[500px] flex-col gap-4'>
+              <div className='flex flex-col items-center'>
+                <ChatText className='text-xl font-bold'>
+                  <b>포트폴리오 설정 완료!</b>
+                </ChatText>
+                <ChatMutedText>
+                  초기 포트폴리오 설정이 성공적으로 완료되었습니다
+                </ChatMutedText>
+              </div>
+
+              <ChatMessageBox className='flex place-content-between'>
+                <div className='flex items-center gap-2'>
+                  <img
+                    className='h-[20px] w-[20px]'
+                    src='/kaia-wallet-logo.svg'
+                    alt='kaia-wallet logo'
+                  />
+                  <div>트랜잭션 해시: 4f2E...8a9B</div>
+                </div>
+                <div>
+                  <ChatText>
+                    <ChatEmphasisText>
+                      <button>카이아 스캔에서 보기</button>
+                    </ChatEmphasisText>
+                  </ChatText>
+                </div>
+              </ChatMessageBox>
+            </div>
+          </div>
+
+          <div className='flex justify-center'>
+            <div className='flex w-full max-w-[500px] flex-col gap-4'>
+              <div className='flex flex-col gap-2'>
+                <ChatText className='text-lg'>
+                  <b>KaiaPort 대시보드의 주요 기능</b>
+                </ChatText>
+                <ChatMessageBox className='flex flex-col gap-3'>
+                  <div className='flex flex-col items-start'>
+                    <ChatText className='text-md'>
+                      <b>포트폴리오</b>
+                    </ChatText>
+                    <ChatText className='text-sm'>
+                      <ChatMutedText>
+                        현재 자산 배분 및 총 가치 / 실시간 변동률
+                      </ChatMutedText>
+                    </ChatText>
+                  </div>
+                  <div className='flex flex-col items-start'>
+                    <ChatText className='text-md'>
+                      <b>목표 진행 상황</b>
+                    </ChatText>
+                    <ChatText className='text-sm'>
+                      <ChatMutedText>
+                        자산 충당률: 108% / 목표 달성 확률: 92% / 남은 기간:
+                        15년
+                      </ChatMutedText>
+                    </ChatText>
+                  </div>
+                  <div className='flex flex-col items-start'>
+                    <ChatText className='text-md'>
+                      <b>자동화 설정</b>
+                    </ChatText>
+                    <ChatText className='text-sm'>
+                      <ChatMutedText>
+                        월별 자동 투자: 매월 5일 150 KAIA / 다음 투자일: 2025년
+                        6월 5일
+                      </ChatMutedText>
+                    </ChatText>
+                  </div>
+                  <div className='flex flex-col items-start'>
+                    <ChatText className='text-md'>
+                      <b>실시간 모니터링</b>
+                    </ChatText>
+                    <ChatText className='text-sm'>
+                      <ChatMutedText>
+                        수익 그래프 / 자산별 성과 비교 / 시뮬레이션 대비 실제
+                        성과
+                      </ChatMutedText>
+                    </ChatText>
+                  </div>
+                </ChatMessageBox>
+              </div>
+            </div>
+          </div>
+
+          <div className='flex justify-center'>
+            <Button
+              size={'lg'}
+              className='hover:bg-[var(--button-secondary-bg)] hover:text-[var(--secondary-text)]'
+            >
+              <b>
+                <Link to='/dashboard'>대시보드로 이동</Link>
+              </b>
+            </Button>
+          </div>
+
+          <div className='flex justify-center'>
+            <ChatText>
+              <ChatMutedText>
+                이제 KAIAPort와 함께 더 스마트한 투자 여정을 시작해보세요!
+              </ChatMutedText>
+            </ChatText>
           </div>
         </ChatContentBox>
       </div>

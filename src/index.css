@@ -52,15 +52,6 @@
   --sidebar-ring: oklch(0.704 0.04 256.788);
 }
 
-a {
-  font-weight: 500;
-  color: #94a3b8;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #64748b;
-}
-
 body {
   margin: 0;
   display: flex;
