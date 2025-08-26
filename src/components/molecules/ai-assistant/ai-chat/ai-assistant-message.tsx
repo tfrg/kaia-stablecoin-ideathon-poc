@@ -16,7 +16,9 @@ export function AiAssistantMessage({
     <ChatMessageBox
       className={`flex max-w-[760px] items-center gap-2 ${className}`}
     >
-      <div>{KaiaPortAiBotAvatar}</div>
+      <div>
+        <KaiaPortAiBotAvatar />
+      </div>
       <div className='rounded-md border bg-[var(--surface-01)] p-2'>
         <ChatText className='text-sm/4'>{children}</ChatText>
       </div>
