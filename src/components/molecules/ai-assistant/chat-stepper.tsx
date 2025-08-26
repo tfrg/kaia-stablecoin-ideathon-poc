@@ -28,7 +28,7 @@ export function ChatStepper({
               <div className='flex flex-col items-center'>
                 <div
                   className={cn(
-                    'flex h-10 w-10 items-center justify-center rounded-full transition-colors',
+                    'flex h-9 w-9 items-center justify-center rounded-full transition-colors',
                     {
                       'bg-[var(--primary-stroke)]': isCurrent || isCompleted,
                       'bg-[var(--surface-01)]': isUpcoming,
@@ -37,14 +37,14 @@ export function ChatStepper({
                 >
                   {(isCurrent || isCompleted) && (
                     <Circle
-                      size={36}
+                      size={32}
                       color={'var(--primary)'}
                       fill={'var(--primary)'}
                     />
                   )}
                 </div>
 
-                <div className='mt-2 text-center'>
+                <div className='mt-1 text-center'>
                   <div
                     className={cn('text-sm font-medium', {
                       'text-[var(--primary)]': isCurrent || isCompleted,

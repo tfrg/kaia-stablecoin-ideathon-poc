@@ -189,14 +189,14 @@ export function AiAssistantChatStep8(): React.JSX.Element {
           </div>
 
           <div className='flex justify-center'>
-            <Button
-              size={'lg'}
-              className='hover:bg-[var(--button-secondary-bg)] hover:text-[var(--secondary-text)]'
-            >
-              <b>
-                <Link to='/dashboard'>대시보드로 이동</Link>
-              </b>
-            </Button>
+            <Link to='/dashboard'>
+              <Button
+                size={'lg'}
+                className='hover:bg-[var(--button-secondary-bg)] hover:text-[var(--secondary-text)]'
+              >
+                <b>대시보드로 이동</b>
+              </Button>
+            </Link>
           </div>
 
           <div className='flex justify-center'>

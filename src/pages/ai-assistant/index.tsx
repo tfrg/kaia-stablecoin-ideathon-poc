@@ -19,13 +19,13 @@ export default function AiAssistant() {
     <DashboardGridLayout>
       <div className='mb-4 flex w-full justify-center'>
         <ChatStepper
-          steps={['목표 설정', '위험 성향', '포트폴리오', '자동화']}
+          steps={['목표 설정', '위험 성향', '포트폴리오', '자동화 설정']}
           currentStep={4}
         />
       </div>
 
       <div className='mb-4 flex w-full justify-end'>
-        <button className='flex items-center gap-4 rounded-full border border-[var(--primary)] bg-[var(--surface-03)] p-3 text-sm'>
+        <button className='flex h-[60px] items-center gap-4 rounded-full border border-[var(--primary)] bg-[var(--surface-03)] p-3 text-sm'>
           <div className='flex h-[36px] w-[36px] items-center justify-center rounded-full bg-[var(--primary)]'>
             <KaiaPortAiBotAvatar size='sm' />
           </div>
