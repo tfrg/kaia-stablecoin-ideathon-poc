@@ -5,7 +5,7 @@ import { Header } from '@/components/layout/header'
 
 export default function AppDashboardLayout() {
   return (
-    <div className='w-screen border-t'>
+    <div className='w-screen'>
       <div className='flex'>
         <AppSidebar />
 

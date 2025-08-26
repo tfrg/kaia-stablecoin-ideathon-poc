@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 import AppDashboardLayout from '@/components/layout/app-dashboard-layout'
 import Loader from '@/components/loader'
 
+import Landing from '@/pages/landing'
 const Dashboard = lazy(() => import('@/pages/dashboard'))
 const Goals = lazy(() => import('@/pages/goals'))
 const Assets = lazy(() => import('@/pages/assets'))
@@ -15,8 +16,10 @@ export default function Router() {
   return (
     <Suspense fallback={<Loader />}>
       <Routes>
+        <Route path='/' element={<Landing />} />
+
         <Route element={<AppDashboardLayout />}>
-          <Route path='/' element={<AiAssistant />} />
+          <Route path='/ai-assistant' element={<AiAssistant />} />
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/goals' element={<Goals />} />
           <Route path='/assets' element={<Assets />} />
