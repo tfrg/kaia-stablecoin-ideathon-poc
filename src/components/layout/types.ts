@@ -9,6 +9,7 @@ interface BaseNavItem {
 type NavLink = BaseNavItem & {
   url: LinkProps['to']
   items?: never
+  disabled?: boolean
 }
 
 type NavCollapsible = BaseNavItem & {

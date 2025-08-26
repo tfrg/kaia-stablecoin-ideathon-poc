@@ -10,7 +10,6 @@ import KaiaPortLogo from '@/components/ui/kaia-port-logo'
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const location = useLocation()
   const currentPath = location.pathname
-
   return (
     <Sidebar className='w-64' {...props}>
       <SidebarHeader className='p-5'>

@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom'
 
+import { NavCollapsible, NavGroup, NavItem, NavLink } from './types'
+import { cn } from '@/lib/utils'
+
 import {
   SidebarGroup,
   SidebarMenu,
@@ -24,8 +27,6 @@ import {
   CollapsibleTrigger,
 } from '@/components/ui/collapsible'
 import { Badge } from '@/components/ui/badge'
-
-import { NavCollapsible, NavGroup, NavItem, NavLink } from './types'
 
 export function NavGroup({ items, currentPath }: NavGroup) {
   const { state, isMobile } = useSidebar()
@@ -64,7 +65,7 @@ const NavBadge = ({ children }: { children: React.ReactNode }) => (
 const SidebarMenuLink = ({ item, href }: { item: NavLink; href: string }) => {
   const { setOpenMobile } = useSidebar()
   return (
-    <SidebarMenuItem>
+    <SidebarMenuItem className={cn(item.disabled && 'pointer-events-none')}>
       <SidebarMenuButton
         asChild
         isActive={checkIsActive(href, item)}
@@ -73,7 +74,9 @@ const SidebarMenuLink = ({ item, href }: { item: NavLink; href: string }) => {
       >
         <Link to={item.url} onClick={() => setOpenMobile(false)}>
           {item.icon && <item.icon />}
-          <span>{item.title}</span>
+          <span className={cn(item.disabled && 'text-[var(--secondary-text)]')}>
+            {item.title}
+          </span>
           {item.badge && <NavBadge>{item.badge}</NavBadge>}
         </Link>
       </SidebarMenuButton>

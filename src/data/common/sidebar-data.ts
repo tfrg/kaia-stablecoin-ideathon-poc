@@ -47,10 +47,12 @@ export const sidebarData: SidebarData = {
         {
           title: '자동화 설정',
           url: '/setting',
+          disabled: true,
         },
         {
           title: '알림 센터',
           url: '/notification',
+          disabled: true,
         },
       ],
     },
