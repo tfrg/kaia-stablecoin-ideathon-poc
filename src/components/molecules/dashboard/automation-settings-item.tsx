@@ -14,7 +14,7 @@ export function AutomationSettingItem({
   isActive,
 }: AutomationSettingItemProps): React.JSX.Element {
   return (
-    <Box>
+    <Box className='flex flex-row place-content-between'>
       <div className='flex items-center space-x-3'>
         <Circle
           className={`h-4 w-4 ${isActive ? 'fill-[var(--primary)] text-lime-400' : 'fill-gray-500 text-gray-500'}`}
