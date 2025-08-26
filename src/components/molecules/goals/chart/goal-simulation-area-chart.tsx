@@ -20,15 +20,15 @@ const chartData = [
 
 const chartConfig = {
   desktop: {
-    label: 'Desktop',
+    label: '예상 성장 경로',
     color: 'var(--chart-1)',
   },
   mobile: {
-    label: 'Mobile',
+    label: '낙관적 시나리오(상위5%)',
     color: 'var(--chart-2)',
   },
   other: {
-    label: 'Other',
+    label: '비관적 시나리오(하위5%)',
     color: 'var(--chart-3)',
   },
 } satisfies ChartConfig
