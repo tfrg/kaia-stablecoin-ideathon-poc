@@ -6,6 +6,7 @@ export const assetListData: AssetData[] = [
   {
     id: '1',
     icon: <Bitcoin className='h-6 w-6 text-orange-500' />,
+    iconSrc: '/img/token/btc-logo.svg',
     name: 'Bitcoin',
     symbol: 'BTC',
     price: '$57,320.45',
@@ -19,6 +20,7 @@ export const assetListData: AssetData[] = [
   {
     id: '2',
     icon: <Bitcoin className='h-6 w-6 text-purple-500' />,
+    iconSrc: '/img/token/eth-logo.svg',
     name: 'Ethereum',
     symbol: 'ETH',
     price: '$2,785.30',
@@ -36,6 +38,7 @@ export const assetListData: AssetData[] = [
         K
       </div>
     ),
+    iconSrc: '/img/token/kaia-logo.svg',
     name: 'KAIA',
     symbol: 'KAIA',
     price: '$175.48',
@@ -53,6 +56,7 @@ export const assetListData: AssetData[] = [
         T
       </div>
     ),
+    iconSrc: '/img/token/usdt-logo.svg',
     name: 'Tether',
     symbol: 'USDT',
     price: '$1.00',
@@ -70,6 +74,7 @@ export const assetListData: AssetData[] = [
         W
       </div>
     ),
+    iconSrc: '/img/token/kaiaw-logo.svg',
     name: 'KAIAWON',
     symbol: 'KAIAW',
     price: '$178.25',

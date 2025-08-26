@@ -1,6 +1,7 @@
 export interface AssetData {
   id: string
   icon: React.ReactNode
+  iconSrc: string
   name: string
   symbol: string
   price: string

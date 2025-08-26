@@ -8,6 +8,7 @@ export const detailAnalysisData: AssetDetailAnalysisData[] = [
         K
       </div>
     ),
+    iconSrc: '/img/token/kaia-logo.svg',
     name: 'KAIA',
     symbol: 'KAIA',
     trend: '상승세: +8.7% (7일) / +120.3% (YTD)',
@@ -20,6 +21,7 @@ export const detailAnalysisData: AssetDetailAnalysisData[] = [
         W
       </div>
     ),
+    iconSrc: '/img/token/kaiaw-logo.svg',
     name: 'KAIAW',
     symbol: 'KAIAW',
     trend: 'APY: 9.8% (기본 8.2% + MEV 1.6%)',
@@ -32,6 +34,7 @@ export const detailAnalysisData: AssetDetailAnalysisData[] = [
         AI
       </div>
     ),
+    iconSrc: '/kaia-port-ai-bot.svg',
     name: 'AI 인사이트',
     symbol: '',
     trend: 'KAIA DeFi TVL 8.2% 상승',

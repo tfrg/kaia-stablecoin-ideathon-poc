@@ -13,7 +13,11 @@ export function AssetDetailAnalysis({ data }: AssetDetailAnalysisProps) {
         <Card key={item.id} className='border-none bg-[var(--box-primary-bg)]'>
           <CardContent className='flex flex-col gap-2'>
             <div className='flex items-center gap-2'>
-              {item.icon}
+              {item.iconSrc ? (
+                <img className='rounded-full' src={item.iconSrc} />
+              ) : (
+                item.icon
+              )}
               <span className='font-bold'>
                 {item.name} {item.symbol && `(${item.symbol})`}
               </span>

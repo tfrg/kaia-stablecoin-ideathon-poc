@@ -40,7 +40,15 @@ export function AssetListTable({ data }: AssetListTableProps) {
           <TableRow key={asset.id} className='hover:bg-transparent'>
             <TableCell className='font-medium'>
               <div className='flex items-center gap-2'>
-                {asset.icon}
+                {asset.iconSrc ? (
+                  <img
+                    className='size-[26px]'
+                    src={asset.iconSrc}
+                    alt={`${asset.name} token logo`}
+                  />
+                ) : (
+                  asset.icon
+                )}
                 <span>
                   {asset.name} ({asset.symbol})
                 </span>
