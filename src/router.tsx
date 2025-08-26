@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, ScrollRestoration } from 'react-router-dom'
 
 import AppDashboardLayout from '@/components/layout/app-dashboard-layout'
 import Loader from '@/components/loader'
@@ -15,6 +15,7 @@ const AiAssistant = lazy(() => import('@/pages/ai-assistant'))
 export default function Router() {
   return (
     <Suspense fallback={<Loader />}>
+      <ScrollRestoration />
       <Routes>
         <Route path='/' element={<Landing />} />
 
