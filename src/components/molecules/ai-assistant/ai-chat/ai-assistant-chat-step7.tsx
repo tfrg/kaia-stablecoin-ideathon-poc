@@ -20,21 +20,21 @@ const wallets = [
   {
     id: 'kaia',
     name: 'Kaia Wallet',
-    icon: '/icons/kaia-wallet.svg',
-    color: 'bg-[#CCFF00]',
+    icon: 'img/wallet/kaia-wallet-logo.svg',
+    color: 'bg-[var(--primary)]',
     textColor: 'text-black',
   },
   {
     id: 'metamask',
     name: 'Metamask',
-    icon: '/icons/metamask.svg',
-    color: 'bg-[#E17726]',
+    icon: 'img/wallet/metamask-wallet-logo.svg',
+    color: 'bg-black',
     textColor: 'text-white',
   },
   {
     id: 'okx',
     name: 'OKX Wallet',
-    icon: '/icons/okx-wallet.svg',
+    icon: 'img/wallet/okx-wallet-logo.svg',
     color: 'bg-black',
     textColor: 'text-white',
   },
@@ -151,16 +151,11 @@ const WalletOption = ({
           wallet.color
         )}
       >
-        {/* 실제 아이콘 이미지 대신 임시 아이콘 표시 */}
-        {wallet.id === 'kaia' && (
-          <div className='text-xl font-bold text-black'>K</div>
-        )}
-        {wallet.id === 'metamask' && (
-          <div className='text-xl font-bold text-white'>M</div>
-        )}
-        {wallet.id === 'okx' && (
-          <div className='text-xl font-bold text-white'>O</div>
-        )}
+        <img
+          className='size-[50px]'
+          src={wallet.icon}
+          alt={`${wallet.name} logo`}
+        />
       </div>
       <div className='font-medium'>{wallet.name}</div>
     </div>

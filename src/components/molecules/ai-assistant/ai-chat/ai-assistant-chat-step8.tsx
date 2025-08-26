@@ -49,7 +49,7 @@ export function AiAssistantChatStep8(): React.JSX.Element {
               <div className='flex items-center gap-2'>
                 <img
                   className='h-[20px] w-[20px]'
-                  src='/kaia-wallet-logo.svg'
+                  src='img/wallet/kaia-wallet-logo.svg'
                   alt='kaia-wallet logo'
                 />
                 <ChatText>Kaia Wallet이 연결되었습니다</ChatText>
@@ -117,7 +117,7 @@ export function AiAssistantChatStep8(): React.JSX.Element {
                 <div className='flex items-center gap-2'>
                   <img
                     className='h-[20px] w-[20px]'
-                    src='/kaia-wallet-logo.svg'
+                    src='img/wallet/kaia-wallet-logo.svg'
                     alt='kaia-wallet logo'
                   />
                   <div>트랜잭션 해시: 4f2E...8a9B</div>

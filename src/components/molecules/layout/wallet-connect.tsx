@@ -6,7 +6,7 @@ export function WalletConnect(): React.JSX.Element {
       <div>
         <img
           className='h-[20px] w-[20px]'
-          src='/kaia-wallet-logo.svg'
+          src='img/wallet/kaia-wallet-logo.svg'
           alt='kaia-wallet logo'
         />
       </div>
