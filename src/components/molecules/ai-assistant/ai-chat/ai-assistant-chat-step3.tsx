@@ -43,7 +43,7 @@ export function AiAssistantChatStep3(): React.JSX.Element {
           </ChatInputField>
 
           <ChatInputField label='정기 납입 계획'>
-            <div className='flex items-center gap-4'>
+            <div className='flex flex-col items-center gap-4 md:flex-row'>
               <ChatValueDisplay value='100' unit='KAIA' className='w-full' />
               <ChatValueDisplay
                 value='매월'
@@ -61,7 +61,7 @@ export function AiAssistantChatStep3(): React.JSX.Element {
                 </ChatText>
               </div>
               <div className='w-full rounded-md border bg-[var(--surface-01)] p-2'>
-                <ChatText className='flex gap-6'>
+                <ChatText className='flex flex-col gap-6 md:flex-row'>
                   <b>5년 후부터 3년간</b>
                   <b>매년 1,000 KAIA</b>
                   <ChatMutedText>자녀 대학 교육비</ChatMutedText>

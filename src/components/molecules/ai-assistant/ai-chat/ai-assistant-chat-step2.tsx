@@ -70,7 +70,7 @@ export function AiAssistantChatStep2(): React.JSX.Element {
                 <b>목표 금액 계산기</b>
               </ChatText>
 
-              <div className='flex gap-4'>
+              <div className='flex flex-col gap-4 lg:flex-row'>
                 <div className='flex flex-1 flex-col xl:min-w-[200px]'>
                   <ChatText>
                     <ChatMutedText>은퇴 후 월 지출 예상</ChatMutedText>

@@ -68,7 +68,7 @@ export function AiAssistantChatStep8(): React.JSX.Element {
               <AutomationSelection />
             </ChatInputField>
 
-            <div className='grid grid-cols-2 gap-2'>
+            <div className='grid grid-cols-1 gap-2 md:grid-cols-2'>
               <ChatInputField label='자동 투자 날짜 설정'>
                 <ChatMessageBox>
                   <div className='flex flex-col items-start gap-4 text-sm'>
@@ -113,8 +113,8 @@ export function AiAssistantChatStep8(): React.JSX.Element {
                 </ChatMutedText>
               </div>
 
-              <ChatMessageBox className='flex place-content-between'>
-                <div className='flex items-center gap-2'>
+              <ChatMessageBox className='flex flex-col place-content-between md:flex-row'>
+                <div className='flex flex-col items-center gap-2 md:flex-row'>
                   <img
                     className='h-[20px] w-[20px]'
                     src='img/wallet/kaia-wallet-logo.svg'
@@ -122,7 +122,7 @@ export function AiAssistantChatStep8(): React.JSX.Element {
                   />
                   <div>트랜잭션 해시: 4f2E...8a9B</div>
                 </div>
-                <div>
+                <div className='flex justify-center md:justify-start'>
                   <ChatText>
                     <ChatEmphasisText>
                       <button>카이아 스캔에서 보기</button>
@@ -302,7 +302,7 @@ const AutomationSelection: React.FC = () => {
   ]
 
   return (
-    <div className='grid grid-cols-3 gap-4'>
+    <div className='grid grid-cols-1 gap-4 lg:grid-cols-3'>
       {automationOptions.map((option) => (
         <AutomationCard
           key={option.id}
