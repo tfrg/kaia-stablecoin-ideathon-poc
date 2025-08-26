@@ -10,7 +10,7 @@ export default function Landing() {
         <Header alwaysViewLogo={true} />
 
         {/* 메인 섹션 */}
-        <main className='font-poppins relative'>
+        <main className='font-poppins relative mb-10'>
           {/* 헤드라인 섹션 */}
           <div className='relative pb-20 text-center'>
             {/* 백그라운드 그라데이션 */}
@@ -120,6 +120,21 @@ export default function Landing() {
             </div>
           </div>
         </main>
+
+        {/* 푸터 섹션 */}
+        <footer className='w-full py-[40px]'>
+          <div className='flex items-center justify-center gap-2'>
+            <button className='flex size-[30px] items-center justify-center rounded-full'>
+              <img src='/img/landing/facebook.svg' />
+            </button>
+            <button className='flex size-[30px] items-center justify-center rounded-full'>
+              <img src='/img/landing/twitter.svg' />
+            </button>
+            <button className='flex size-[30px] items-center justify-center rounded-full'>
+              <img src='/img/landing/instagram.svg' />
+            </button>
+          </div>
+        </footer>
       </div>
     </div>
   )
